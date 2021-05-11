@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /autoptimize/
+Disallow: /author/
+Disallow: /admin/
+Sitemap: https://site.com.ua/sitemap_html.xml
+Sitemap: https://site.com.ua/sitemap_images.xml
+Sitemap: https://site.com.ua/sitemap_video.xml
+
+User-Agent: Yandex
+Allow: /autoptimize/
+Disallow: /author/
+Disallow: /admin/
+Host: https://site.com.ua
+
+User-Agent: Googlebot
+Allow: /autoptimize/
+Disallow: /author/
+Disallow: /admin/
+Host: https://site.com.ua
