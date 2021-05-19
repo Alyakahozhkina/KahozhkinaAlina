@@ -1,0 +1,67 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    outline: none;
+}
+.container {
+    max-width: 1170px;
+    margin: 0px auto;
+}
+.content {
+    background: url(../img/sky.jpg) no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    padding: 250px 0px;
+    min-height: 1200px;
+}
+.homework {
+    display: flex;
+}
+.homework_first,
+.homework_second {
+    flex: 1 1 50%;
+    padding: 0 10px;
+}
+.homework_title {
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(119, 0, 0);
+}
+.homework_text {
+    text-transform: lowercase;
+    text-indent: 20px;
+    text-align: justify;
+    font-size: 18px;
+    color: rgb(119, 0, 0);
+    margin: 10px 0 0 0;
+}
+.name_user, .phone, .message {
+    width: 100%;
+    padding: 5px 0 5px 10px;
+    margin: 0 0 5px 0;
+    font-size: 14px;
+    border-radius: 10px;
+    border: 2px solid rgb(119, 0, 0);
+}
+.phone:focus, .name_user:focus, .message:focus {
+    box-shadow: 3px 3px 10px rgb(248, 0, 0);
+    background-color: rgb(255, 160, 160);
+    transition-property: background-color, box-shadow;
+    transition-duration: 900ms, 500ms;
+    transition-delay: 0s, 400ms;
+}
+.form_btn {
+    padding: 10px 0px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 16px;
+    border-radius: 10px;
+    width: 100%;
+    min-width: 150px;
+    font-weight: 600;
+    border: 2px solid rgb(119, 0, 0);
+    color: rgb(119, 0, 0);
+}
