@@ -1,0 +1,50 @@
+/* 
+    font-family: 'mountains_of_christmasbold';
+    font-family: 'mountains_of_christmasregular'; */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.content {
+    background: url(../img/fon.jpg) no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    padding: 100px 0px 500px 0px;
+}
+.container {
+    margin: 0 auto;
+    max-width: 1170px;
+}
+ul.content__menu li {
+    list-style-type: none;
+    background: url(../img/list-style-image.png) no-repeat;
+    background-size: 30px;
+    background-position: left;
+    margin: 0 0 15px 0;
+    padding: 0 0 0 40px;
+}
+ul.content__menu li a {
+    font-family: 'mountains_of_christmasbold';
+    text-decoration: none;
+    font-size: 35px;
+    line-height: 45px;
+    color: blue;
+}
+ul.content__menu li a:hover, ul.content__menu li a.active {
+color: red;
+font-size: 45px;
+}
+ul.content__sub-menu li {
+    margin-left: 50px; 
+}
+ul.content__sub-menu li a {
+    font-family: 'mountains_of_christmasregular';  
+}
+ul.content__sub-menu li a:hover {
+    color: green;
+    font-size: 45px;
+}
