@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+.clearfix {
+    clear: both;
+}
+.wrapper {
+    background-color: rgba(136, 144, 255, 0.712);
+}
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 100px 0 200px 0;
+}
+.box-images h2.title {
+    text-align: center;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 20px 0;
+}
+.box-images>img {
+    float: left;
+    width: 300px;
+    margin: 0px 45px;
+}
+.box-images .description {
+    margin: 20px 0 0 0;
+}
+.box-images .description img {
+    float: left;
+    width: 400px;
+    margin: 0 10px 0 0;
+}
+.box-images .description p.text {
+    font-size: 22px;
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+}
