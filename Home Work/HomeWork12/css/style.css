@@ -1,0 +1,131 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+body {
+    color: #333;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+p {
+    margin-bottom: 20px;
+}
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+header {
+    background: #ccc;
+    padding-top: 15px;
+}
+.logo {
+    float: left;
+    width: 200px;
+}
+.slogan {
+    float: left;
+    width: 400px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 13px;
+}
+.header-contact {
+    float: right;
+}
+.clearfix {
+    clear: both;
+}
+.header-contact a {
+    display: block;
+    text-decoration: none;
+    line-height: 19px;
+    color:blueviolet;
+    font-weight: bold;
+}
+.header-contact a:hover {
+    text-decoration: underline;
+}
+.nav {
+    background-color: rgb(5, 5, 70);
+    margin-top: 5px;
+}
+.nav ul.menu {
+    list-style-type: none;
+}
+.nav ul.menu li {
+    display: inline-block;
+    position: relative;
+}
+.nav ul.menu li a{
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: inline-block;
+    font-size: 15px;
+}
+.nav ul.menu li a:hover{
+    background: blueviolet;
+}
+.nav ul.menu li ul.sub-menu {
+    list-style-type: none;
+    position: absolute;
+    left: 0;
+    top: 47px;
+    background: rgb(0, 68, 100);
+    width: 200px;
+    display: none;
+    z-index: 9999;
+}
+.nav ul.menu li ul.sub-menu li a {
+    padding: 5px 20px;
+    width: 100%;
+    display: block;
+}
+.nav ul.menu li ul.sub-menu li {
+    display: block;
+}
+.nav ul.menu li:nth-child(5):hover ul.sub-menu {
+    display: block;
+}
+.slide1 {
+    background: url(../img/img1.jpg) no-repeat;
+    background-size: cover;
+    padding: 300px 0;
+    width: 100%;
+}
+.slide2 {
+    background: url(../img/img2.jpg) no-repeat;
+    background-size: cover;
+    padding: 300px 0;
+    width: 100%;
+}
+.slide3 {
+    background: url(../img/img3.jpg) no-repeat;
+    background-size: cover;
+    padding: 300px 0;
+    width: 100%;
+}
+.slider {
+    overflow: hidden;
+}
+.slider .item h2 {
+    font-size: 30px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: black;
+    padding-bottom: 5px;
+    text-align: center;
+}
+.slider .item p {
+    font-size: 20px;
+    color: black;
+    text-align: justify;
+    font-weight: 600;
+}
