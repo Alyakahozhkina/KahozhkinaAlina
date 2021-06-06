@@ -15,7 +15,7 @@ jQuery(document).ready(function () {
 		dotsSpeed: 1000,
 		loop: true,
 		nav: true,
-		navText: ['<', '>'],
+		navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>'],
 		dots: false,
 		mouseDrag: true,
 		margin: 30,

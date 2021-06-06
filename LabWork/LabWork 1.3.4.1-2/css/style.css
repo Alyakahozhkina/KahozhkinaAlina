@@ -1,0 +1,44 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    outline: none;
+}
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+header, footer {
+    background-color: rgba(173, 235, 228, 0.685);
+    padding: 15px 0;
+}
+header button, footer button {
+    padding: 15px;
+    background-color: cadetblue;
+    color: white;
+}
+header {
+    text-align: right;
+}
+footer {
+    text-align: left;
+}
+main .section {
+    border: 1px solid blue;
+    margin: 20px;
+    padding: 15px;
+}
+main .section p {
+    background-color: rgba(202, 241, 238, 0.342);
+    margin: 0 0 10px 0;
+}
+main .section p button {
+    background-color: rgb(138, 0, 0);
+    color: white;
+    padding: 5px
+}
+main .section > button {
+    background-color: white;
+    color: blue;
+    padding: 5px;
+}

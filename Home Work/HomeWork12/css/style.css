@@ -9,6 +9,16 @@ body {
     font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
 }
+body, html {
+    height: 100%;
+}
+.for_page {
+    position: relative;
+    min-height: 100%;
+}
+.page {
+    padding-bottom: 96px;
+}
 img {
     max-width: 100%;
     width: auto;
@@ -23,7 +33,7 @@ p {
 }
 header {
     background: #ccc;
-    padding-top: 15px;
+    padding-top: 20px;
 }
 .logo {
     float: left;
@@ -54,7 +64,7 @@ header {
 }
 .nav {
     background-color: rgb(5, 5, 70);
-    margin-top: 5px;
+    margin-top: 20px;
 }
 .nav ul.menu {
     list-style-type: none;
@@ -81,7 +91,7 @@ header {
     background: rgb(0, 68, 100);
     width: 200px;
     display: none;
-    z-index: 9999;
+    z-index: 10;
 }
 .nav ul.menu li ul.sub-menu li a {
     padding: 5px 20px;
@@ -97,25 +107,29 @@ header {
 .slide1 {
     background: url(../img/img1.jpg) no-repeat;
     background-size: cover;
-    padding: 300px 0;
+    padding: 200px 0;
     width: 100%;
+    background-position: center center;
 }
 .slide2 {
     background: url(../img/img2.jpg) no-repeat;
     background-size: cover;
-    padding: 300px 0;
+    padding: 200px 0;
     width: 100%;
+    background-position: center center;
 }
 .slide3 {
     background: url(../img/img3.jpg) no-repeat;
     background-size: cover;
-    padding: 300px 0;
+    padding: 200px 0;
     width: 100%;
+    background-position: center center;
 }
 .slider {
     overflow: hidden;
 }
-.slider .item h2 {
+
+#carousel-main .owl-item h2 {
     font-size: 30px;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -123,9 +137,90 @@ header {
     padding-bottom: 5px;
     text-align: center;
 }
-.slider .item p {
+#carousel-main .owl-item p {
     font-size: 20px;
     color: black;
     text-align: justify;
     font-weight: 600;
+}
+.slide {
+    background: rgba(255, 255, 255, 0.521);
+    padding: 20px;
+    width: 600px;
+}
+#carousel-main .owl-nav .owl-prev {
+    position: absolute;
+    left: 20px;
+    bottom: 350px;
+}
+#carousel-main .owl-nav .owl-prev:hover {
+    background: none;
+    opacity: 0.6;
+    
+}
+#carousel-main .owl-nav .owl-next {
+    position: absolute;
+    right: 20px;
+    bottom: 350px;
+}
+#carousel-main .owl-nav .owl-next:hover {
+    background: none;
+    opacity: 0.6;
+}
+#carousel-main .owl-nav .owl-prev i,
+#carousel-main .owl-nav .owl-next i {
+    font-size: 40px;
+    color: white;
+}
+.sidebar {
+    width: 400px;
+    float: left;
+    background: rgb(203, 240, 241);
+    padding: 20px;
+}
+.aside {
+    width: 770px;
+    float: left;
+    padding-left: 30px;
+    font-size: 15px;
+}
+.sidebar ul.sidebar_menu {
+    list-style-type: none;
+}
+.sidebar ul.sidebar_menu li a {
+    display: block;
+    width: 100%;
+    padding: 15px 0px 15px 20px;
+    background: rgb(243, 199, 199);
+    margin: 15px 0px;
+    text-decoration: none;
+    font-size: 17px;
+    line-height: 25px;
+    font-weight: 600;
+    border-radius: 20px;
+    color: rgb(0, 0, 0);
+}
+.sidebar ul.sidebar_menu li a:hover {
+    background: rgb(2, 5, 32);
+    text-decoration: underline;
+    color: rgb(255, 255, 255);
+    box-shadow: 1px 3px 4px black;
+}
+.sidebar ul.sidebar_menu li a .fas {
+    color: rgb(243, 199, 199);
+    padding-left: 220px;
+    font-size: 23px;
+}
+.footer {
+    background: burlywood;
+    color: black;
+    padding: 40px 0;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.footer .flex-container {
+    display: flex;
+    justify-content: center;
 }
