@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.text-shadow p {
+    font-size: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.text-shadow p:first-child {
+    text-shadow: 20px 30px 0px #00000070;
+    margin-top: 40px;
+}
+.text-shadow p:nth-child(2) {
+    text-shadow: 20px 30px 5px #00000070;
+}
+.text-shadow p:nth-child(3) {
+    text-shadow: 15px 10px 5px #ff0000, -15px -10px 5px #0000ff
+}
+.text-shadow p:nth-child(4) {
+    color: rgb(238, 202, 130);
+    text-shadow: -1px -1px #666, -1px -1px #666;
+}
+.text-shadow p:nth-child(5) {
+    color: rgb(238, 161, 130);
+    text-shadow: 1px 1px #666, 1px 1px #666, 1px 1px 2px #666, 1px 1px 3px #666;
+}
+.text-shadow p:last-child {
+    color:  rgb(202, 180, 134);
+    text-shadow: 1px 0px #000, 0px 1px #000, -1px 0px #000, 0px -1px #000
+}
+
+.box-shadow p {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    margin: 0px auto 40px;
+}
+.box-shadow p:first-child {
+    box-shadow: 20px 30px rgba(102, 102, 102, 0.815);
+}
+.box-shadow p:nth-child(2) {
+    box-shadow: 20px 30px 10px rgba(102, 102, 102, 0.815);
+}
+.box-shadow p:last-child {
+    box-shadow: inset -5px -5px 10px #ff0000, inset 5px 5px 10px #0000ff; 
+}
+
+.gradient p {
+    width: 500px;
+    height: 300px;
+    border: 1px solid black;
+    margin: 0px auto 40px;
+}
+.gradient p:first-child {
+    background: linear-gradient(to right, red, blue 250px, white 420px, red);
+}
+.gradient p:nth-child(2) {
+    background: linear-gradient(to bottom, red 100px, white 0px, white 200px, red 100px);
+}
+.gradient p:nth-child(3) {
+    background: radial-gradient(circle closest-side, rgb(0, 225, 255), rgb(0, 47, 255))
+}
+.gradient p:nth-child(4) {
+    background: radial-gradient(circle closest-corner at 40px 50px, rgb(0, 225, 255), rgb(0, 47, 255))
+}
+.gradient p:last-child {
+    background: radial-gradient(circle closest-side, rgb(46, 48, 46) 20px, white 50px, white 60px, rgb(0, 116, 0) 70px)
+}
