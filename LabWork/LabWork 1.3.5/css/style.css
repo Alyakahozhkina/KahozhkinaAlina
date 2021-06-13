@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+body {
+    background: url(../img/world-map.png) no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+.page h1 {
+    letter-spacing: 4px;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 70px;
+}
+.page h2 {
+    letter-spacing: 2px;
+    font-style: italic;
+    text-align: center;
+    font-family: cursive;
+    font-weight: normal;
+    margin-top: 20px;
+}
+.page ul.list {
+    text-align: center;
+    list-style-type: none;
+    margin-top: 20px;
+}
+.page ul.list li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: blue;
+    font-size: 20px;
+    font-weight: bold;
+}
+.page ul.list li a:visited {
+    color: darkgrey;
+}
+.page ul.list li a:hover {
+    color: red;
+}
+.page p {
+    color: darkslategrey;
+    text-indent: 20px;
+    text-align: justify;
+    font-size: 18px;
+    margin-top: 20px;
+}
