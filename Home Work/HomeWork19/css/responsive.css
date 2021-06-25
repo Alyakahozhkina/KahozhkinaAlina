@@ -1,0 +1,106 @@
+
+@media (max-width:1199px){
+
+}
+@media (max-width:991px){
+    .nav-menu ul.menu li a {
+        padding-left: 15px;
+    }
+    .baner {
+        padding: 200px 0px 110px;
+    }
+    .baner-text h1 {
+        font-size: 50px;
+        line-height: 61px;
+        margin-bottom: 17px;
+    }
+    .box-text-baner {
+        margin-bottom: 51px;
+    }
+    .block2 {
+        margin-top: -25px;
+    }
+    .block2 .box-service .box-service-text{
+        margin-bottom: 42px;
+    }
+    .block2 .box-service .box-service-img{
+        margin-bottom: 25px;
+    }
+}
+@media (max-width:767px){
+    .logo img {
+        display: block;
+        margin: 0 auto;
+    }
+    .logo {
+        padding-bottom: 20px;
+        display: block;
+    }
+    .nav-menu ul.menu {
+        justify-content: center;
+    }
+    .header {
+        padding-top: 25px;
+    }
+    .baner {
+        top: -132px;
+    }
+    .separator {
+        padding-bottom: 13px;
+    }
+    .baner-text h1 {
+        font-size: 35px;
+        line-height: 46px;
+        margin-bottom: 15px;
+    }
+    .baner {
+        padding: 180px 0px 70px;
+    }
+    .box-text-baner {
+        font-size: 18px;
+        line-height: 29px;
+        margin-bottom: 31px;
+    }
+    .block2 {
+        margin-top: -70px;
+    }
+    .block2 .box-service .box-service-text{
+        margin-bottom: 30px;
+    }
+    .block2 .box-service .box-service-img{
+        margin-bottom: 18px;
+    }
+    .block2 .box-service h2{
+        margin-bottom: 10px;
+    }
+}
+@media (max-width:600px){
+
+}
+@media (max-width:500px){
+
+}
+@media (max-width:470px){
+    .nav-menu ul.menu li a {
+        padding-left: 10px;
+        font-size: 11px;
+    }
+    .baner-text h1 {
+        font-size: 25px;
+        line-height: 36px;
+    }
+    .separator {
+        padding-bottom: 5px;
+    }
+    .baner {
+        padding: 165px 0px 45px;
+    }
+    .box-text-baner {
+        font-size: 14px;
+        line-height: 25px;
+        margin-bottom: 21px;
+    }
+    .block2 {
+        margin-top: -85px;
+    }
+}
