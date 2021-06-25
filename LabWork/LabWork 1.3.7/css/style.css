@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+.container {
+    margin: 0px auto;
+    max-width: 1200px;
+}
+.clearfix {
+    clear: both;
+}
+
+/* First method */
+.page {
+    height: 276px;
+    margin-top: 50px;
+}
+.page div {
+    float: left;
+    width: 300px;
+    height: 100%;
+    background-color: rgb(206, 206, 206);
+}
+div p {
+    text-align: justify;
+    padding: 30px 20px;
+}
+.page div:nth-child(2),
+.page div:last-child {
+    background-color: rgb(151, 150, 150);
+}
+/* First method */
+
+/* Second method */
+.page-linear-gradient {
+    display: inline-block;
+    width: 100%;
+    margin-top: 50px;
+    background: linear-gradient(to right, rgb(206, 206, 206) 0px, rgb(206, 206, 206) 300px, rgb(151, 150, 150) 300px, rgb(151, 150, 150) 600px, rgb(206, 206, 206) 600px, rgb(206, 206, 206) 900px, rgb(151, 150, 150) 900px, rgb(151, 150, 150) 1200px);
+}
+.page-linear-gradient div {
+    float: left;
+    width: 300px;
+}
+/* Second method */

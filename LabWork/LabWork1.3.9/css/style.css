@@ -1,0 +1,95 @@
+* {
+    /* margin: 0;
+    padding: 0; */
+    box-sizing: border-box;
+    outline: none;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    padding: 15px 0px;
+    background: blueviolet;
+}
+.header .item:last-child {
+    margin-left: auto;
+    margin-right: 25px;
+}
+.header a {
+    text-decoration: none;
+    padding: 10px;
+    margin-left: 15px;
+    background: brown;
+    color: white;
+    -webkit-transition: background 0.5s;
+    -moz-transition: background 0.5s;
+    -o-transition: background 0.5s;
+    transition: background 0.5s;
+}
+.header a:hover {
+    background: chocolate;
+}
+/* HEADER */
+
+
+/* EVENTS */
+.title {
+    margin: 20px 0 30px;
+}
+.events .description {
+    display: flex;
+    margin-bottom: 20px;
+}
+.events .description .item {
+    padding: 15px;
+}
+.events .description .item:first-child {
+    flex: 1 0;
+    background: rgba(245, 245, 220, 0.932);
+}
+.events .description .item:not(.item:first-child) {
+    flex: 0 0 200px;
+    border: 1px solid rgba(210, 105, 30, 0.192);
+}
+/* EVENTS */
+
+/* JOBS */
+.jobs .description {
+    display: flex;
+    margin: 0px 10px 30px;
+}
+.jobs .description .item {
+    color: white;
+    padding: 15px;
+}
+.jobs .description .item:first-child {
+    flex: 0 0 200px;
+    background: darkred;
+    margin-right: 15px;
+}
+.jobs .description .item:last-child {
+    flex: 1 0;
+    display: flex;
+    background: rgb(218, 120, 0);
+}
+.jobs .description .item a {
+    text-decoration: none;
+    padding: 15px;
+    color: white;
+    background: rgb(146, 44, 44);
+    border: 1px solid darkred;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    align-self: flex-end;
+    margin-left: 5px;
+    -webkit-transition: background 0.5s;
+    -moz-transition: background 0.5s;
+    -o-transition: background 0.5s;
+    transition: background 0.5s;
+}
+.jobs .description .item a:hover {
+    background: darkslateblue;
+}
+/* JOBS */

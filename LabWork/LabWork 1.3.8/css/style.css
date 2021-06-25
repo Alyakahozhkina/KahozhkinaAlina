@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+body {
+    background: url(../img/space.jpg); 
+}
+.container {
+    max-width: 1170px;
+    margin: 0px auto;
+    position: relative;
+}
+.orbit {
+    border: 5px solid white;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    height: 700px;
+    width: 700px;
+    position: relative;
+    top: 65px;
+    left: 235px;
+    z-index: 5;
+}
+.sun {
+    background: rgb(255, 196, 0);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    z-index: 10;
+    top: 300px;
+    left: 485px;
+    box-shadow: 0px 0px 20px rgb(255, 196, 0);
+    -webkit-transition: transform 500ms;
+    -moz-transition: transform 500ms;
+    -o-transition: transform 500ms;
+    transition: transform 500ms;
+}
+.orbit .mars .mars-figure {
+    width: 100px;
+    height: 100px;
+    margin: 0px auto;
+    background: radial-gradient(rgb(31, 0, 0), rgb(83, 0, 0), rgb(200, 0, 0));
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    margin-top: 25px;
+    -webkit-transition: transform 500ms;
+    -moz-transition: transform 500ms;
+    -o-transition: transform 500ms;
+    transition: transform 500ms;
+}
+.orbit .mars {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 275px;
+    left: 270px;
+    -webkit-animation: mars 6s linear infinite;
+    -moz-animation: mars 6s linear infinite;
+    -o-animation: mars 6s linear infinite;
+    animation: mars 6s linear infinite;
+}
+.sun:hover,
+.orbit .mars .mars-figure:hover {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}
+.orbit:hover .mars {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused;
+}
+@-webkit-keyframes mars {
+    from {
+        -webkit-transform: rotate(0deg) translateX(350px) rotate(0deg);
+      }
+      to {
+        -webkit-transform: rotate(360deg) translateX(350px) rotate(-360deg);
+      }
+}
+@-moz-keyframes mars {
+    from {
+        -moz-transform: rotate(0deg) translateX(350px) rotate(0deg);
+      }
+      to {
+        -moz-transform: rotate(360deg) translateX(350px) rotate(-360deg);
+      }
+}
+@-o-keyframes mars {
+    from {
+        -o-transform: rotate(0deg) translateX(350px) rotate(0deg);
+      }
+      to {
+        -o-transform: rotate(360deg) translateX(350px) rotate(-360deg);
+      }
+}
+@keyframes mars {
+    from {
+        transform: rotate(0deg) translateX(350px) rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg) translateX(350px) rotate(-360deg);
+      }
+}
