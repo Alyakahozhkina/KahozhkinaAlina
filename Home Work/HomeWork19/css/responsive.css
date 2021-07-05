@@ -7,7 +7,8 @@
         padding-left: 15px;
     }
     .baner {
-        padding: 200px 0px 110px;
+        padding: 296px 0px 110px;
+        top: -197px;
     }
     .baner-text h1 {
         font-size: 50px;
@@ -26,6 +27,20 @@
     .block2 .box-service .box-service-img{
         margin-bottom: 25px;
     }
+    .nav-menu ul.menu {
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        margin: 0 auto;
+        z-index: 999;
+    }
+    .nav-menu::after{
+        content: '';
+        position: relative;
+        background: rgba(0, 0, 0, 0.473);
+        height: 1000px
+    }
+    
 }
 @media (max-width:767px){
     .logo img {
