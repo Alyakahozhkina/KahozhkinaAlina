@@ -1,0 +1,28 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    outline: none;
+}
+.container {
+    margin: 0 auto;
+    text-align: center;
+}
+button {
+    font-size: 25px;
+    padding: 10px;
+    margin: 10px;
+    max-width: 500px;
+    width: 100%;
+    background: rgb(109, 0, 0);
+    border: 1px solid rgb(109, 0, 0);
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+}
+.container>div {
+    margin: 0 auto;
+    max-width: 500px;
+    width: 100%;
+    text-align: left;
+}
