@@ -1,0 +1,46 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+}
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    text-align: center;
+}
+.text {
+    padding-top: 25px;
+    max-height: 0px;
+    text-align: justify;
+    overflow: hidden;
+    margin: 0 auto;
+    transition: max-height 0.6s linear, padding 0.3s ease-in;
+}
+.text.show {
+    max-height: 250px;
+    padding-bottom: 25px;
+}
+.button {
+    max-width: 120px;
+    width: 100%;
+    padding: 10px 0px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    background: rgb(110, 0, 0);
+    color: #fff;
+    border: 1px solid rgb(110, 0, 0);
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+.button:hover {
+    background: rgb(165, 0, 0);
+}
