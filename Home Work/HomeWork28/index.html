@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeWork28</title>
+</head>
+<body class="body">
+    <div class="text"></div>
+
+
+
+    
+</body>
+<script>
+
+    let woman = {
+    firstName : "Maya",
+    lastName : "Dos",
+    language: " ",
+    name: " ",
+    "name Dog": "Profi",
+    set nameCat (nameCat) {
+        this.name = nameCat;
+    },
+    set lang (lang) {
+        this.language = lang;
+    }
+}
+
+woman.nameCat = 'Marissa';
+woman.lang = 'english';
+
+delete woman['name Dog'];
+
+
+let text = document.querySelector('.text');
+text.innerHTML = 'firstName: ' + woman.firstName + '<br>' + 'lastName: ' + woman.lastName + '<br>' + 'language: ' + woman.language + '<br>' + 'name: ' + woman.name;
+
+</script>
+</html>
