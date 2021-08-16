@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeWork30</title>
+</head>
+<style>
+    .error {
+        color: red;
+        margin-top: 10px;
+    }
+    .phone, .button {
+        padding: 5px;
+        outline: none;
+    }
+</style>
+<body class="body">
+    <p>Введите Ваш номер телефона:</p>
+    <input class="phone" type="text" maxlength="13" placeholder="+380123456789">
+    <button class="button" onclick="sendPhone()" type="submit">Отправить</button>
+    <div class="error"></div>
+    
+</body>
+<script>
+
+    function sendPhone () {
+        let phone, error;
+        phone = document.querySelector('.phone').value;
+        error = document.querySelector('.error');
+        error.innerHTML = '';
+
+        try {
+            if(isNaN(phone)) throw 'Вы ввели не число';
+            if(phone == '') throw 'Вы не заполнили поле ввода';
+            if(phone.length < 12) throw 'Вы ввели не полный номер телефона';
+            if(phone.length < 13 && phone[0] == '+') throw 'Вы ввели не полный номер телефона';
+            if(phone[0] != '+') throw 'Номер должен начинаться с <b>+</b>';
+        }
+        catch (err) {
+            error.innerHTML = err;
+        }
+    }
+</script>
+</html>
+
+
+
