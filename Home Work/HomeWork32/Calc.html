@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate</title>
+</head>
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+.main-calculator {
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #3D808C;
+    padding: 20px;
+    border: 1px solid #000;
+    margin-top: 100px;
+}
+.main-calculator .operation-block button {
+    width: 40px;
+    height: 40px;
+    margin: 20px;
+    cursor: pointer;
+    background: #100C0C;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    transition: 0.3s;
+}
+.main-calculator .operation-block button:hover {
+    background: #630063;
+}
+
+
+.main-calculator .inputs-block .input-block {
+    display: inline-block;
+    padding: 10px;
+}
+
+.main-calculator .inputs-block .input-block input{
+    outline: none;
+    padding: 10px;
+    border:  2px solid black;
+}
+
+.main-calculator .inputs-block .input-block label{
+    display: block;
+}
+
+.resultText {
+    background: #fff;
+    padding: 8px 0 8px;
+    width: 200px;
+    font-size: 18px;
+    margin: 0 auto;
+    margin-top: 10px;
+    color: rgba(0, 0, 0, 0.336);
+    border:  2px solid black;
+}
+</style>
+<body class="body">
+
+        <div class="main-calculator">
+            <div class="operation-block">
+                <button id="buttonPlus">+</button>
+                <button id="buttonMinus">-</button>
+                <button id="buttonMultiply">*</button>
+                <button id="buttonDevide">/</button>
+                <button id="buttonProcent">%</button>
+            </div>
+            <div class="separator"></div>
+
+            <div class="inputs-block">
+                <div class="input-block">
+                    <label for="">Number 1</label>
+                    <input type="number" name="" id="number1" value="10">
+                </div>
+                <div class="input-block">
+                    <label for="">Number 2</label>
+                    <input type="number" name="" id="number2" value="2">
+                </div>
+            </div>
+            <div class="resultText">Result</div>
+        </div>
+
+</body>
+<script>
+
+
+let buttonPlus = document.getElementById('buttonPlus');
+let buttonMinus = document.getElementById('buttonMinus');
+let buttonMultiply = document.getElementById('buttonMultiply');
+let buttonDevide = document.getElementById('buttonDevide');
+let buttonProcent = document.getElementById('buttonProcent');
+let input1 = document.getElementById('number1');
+let input2 = document.getElementById('number2');
+let resultText = document.querySelector('.resultText');
+
+
+
+function operationResult (operationChild) {
+    let number1 = Number(input1.value);
+	let number2 = Number(input2.value);
+    let result;
+    switch (operationChild) {
+        case '+':
+        result = number1 + number2;
+        break;
+
+        case '-':
+        result = number1 - number2;
+        break;
+
+        case '*':
+        result = number1 * number2;
+        break;
+
+        case '/':
+        result = number1 / number2;
+        break;
+
+        case '%':
+        result = number1 * number2 / 100;
+        break;
+
+        default:
+            alert('Таких данных нет');
+            break;
+    }
+
+
+    resultText.innerHTML = result;
+    resultText.style.color = '#000';
+}
+
+
+function buttonPlusClick () {
+    operationResult ('+');
+}
+function buttonMinusClick () {
+    operationResult ('-');
+}
+function buttonMultiplyClick () {
+    operationResult ('*');
+}
+function buttonDevideClick () {
+    operationResult ('/');
+}
+function buttonProcentClick () {
+    operationResult ('%');
+}
+
+buttonPlus.addEventListener('click', buttonPlusClick);
+buttonMinus.addEventListener('click', buttonMinusClick);
+buttonMultiply.addEventListener('click', buttonMultiplyClick);
+buttonDevide.addEventListener('click', buttonDevideClick);
+buttonProcent.addEventListener('click', buttonProcentClick);
+
+</script>
+</html>
