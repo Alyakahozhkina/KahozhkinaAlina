@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeWork33</title>
+</head>
+<style>
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+    }
+    img {
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        object-fit: cover;
+    }
+    .container {
+        max-width: 1335px;
+        margin: 0 auto;
+    }
+    .list-img {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .list-block {
+        margin: 0px 10px;
+    }
+    .title {
+        margin-top: 7px;
+        text-align: center;
+    }
+    .all-versions {
+        position: relative;
+        height: 280px;
+        width: 425px;
+        overflow: hidden;
+        margin-top: 7px;
+    }
+    .js-img {
+        position: relative;
+        z-index: 1;
+        -webkit-transition: all 0.6s;
+        -moz-transition: all 0.6s;
+        -o-transition: all 0.6s;
+        transition: all 0.6s;
+    }
+    .css-img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 2;
+        -webkit-transition: all 0.6s;
+        -moz-transition: all 0.6s;
+        -o-transition: all 0.6s;
+        transition: all 0.6s;
+    }
+    .first-version .css-img:hover {
+        opacity: 0;
+    }
+    .second-version:hover .css-img {
+        margin-top: -280px;
+    }
+    .third-version:hover .css-img {
+        left: -100%;
+    }
+    .fourth-version .js-img, .fourth-version:hover .css-img {
+        transform: scale(0);
+        opacity: 0;
+    }
+    .fourth-version:hover .js-img, .fourth-version .css-img {
+        transform: scale(1);
+        opacity: 1;
+    }
+    .fifth-version:hover .css-img {
+        transform: translate(100%, 100%);
+    }
+    .sixth-version:hover .css-img {
+        display: none;
+    }
+    .seventh-version:hover .css-img {
+        max-width: 0px;
+    }
+    .seventh-version {
+        margin-bottom: 20px;
+    }
+    .eighth-version .css-img {
+        transition: all 0s;
+    }
+    .eighth-version:hover .css-img {
+        visibility: hidden;
+    }
+    
+</style>
+<body>
+    <div class="page">
+        <div class="container">
+            <div class="list-img">
+                <div class="list-block">
+                    <h2 class="title">1. First version (opacity):</h2>
+                    <div class="first-version all-versions">
+                        <img class="css-img" src="./img/CSS.jpg" alt="css">
+                        <img class="js-img" src="./img/JS.jpg" alt="js">
+                    </div>
+                </div>
+                <div class="list-block">
+                    <h2 class="title">2. Second version (margin-top):</h2>
+                    <div class="second-version all-versions">
+                        <img class="css-img" src="./img/CSS.jpg" alt="css">
+                        <img class="js-img" src="./img/JS.jpg" alt="js">
+                    </div>
+                </div>
+                <div class="list-block">
+                    <h2 class="title">3. Third version (left):</h2>
+                    <div class="third-version all-versions">
+                        <img class="css-img" src="./img/CSS.jpg" alt="css">
+                        <img class="js-img" src="./img/JS.jpg" alt="js">
+                    </div>
+                </div>
+                <div class="list-block">
+                    <h2 class="title">4. Fourth version (scale):</h2>
+                    <div class="fourth-version all-versions">
+                        <img class="css-img" src="./img/CSS.jpg" alt="css">
+                        <img class="js-img" src="./img/JS.jpg" alt="js">
+                    </div>
+                </div>
+                <div class="list-block">
+                    <h2 class="title">5. Fifth version (translate):</h2>
+                    <div class="fifth-version all-versions">
+                        <img class="css-img" src="./img/CSS.jpg" alt="css">
+                        <img class="js-img" src="./img/JS.jpg" alt="js">
+                    </div>
+                </div>
+                <div class="list-block">
+                    <h2 class="title">6. Sixth version (display):</h2>
+                    <div class="sixth-version all-versions">
+                        <img class="css-img" src="./img/CSS.jpg" alt="css">
+                        <img class="js-img" src="./img/JS.jpg" alt="js">
+                    </div>
+                </div>
+                <div class="list-block">
+                    <h2 class="title">7. Seventh version (max-width):</h2>
+                    <div class="seventh-version all-versions">
+                        <img class="css-img" src="./img/CSS.jpg" alt="css">
+                        <img class="js-img" src="./img/JS.jpg" alt="js">
+                    </div>
+                </div>
+                <div class="list-block">
+                    <h2 class="title">8. Eighth version (visibility):</h2>
+                    <div class="eighth-version all-versions">
+                        <img class="css-img" src="./img/CSS.jpg" alt="css">
+                        <img class="js-img" src="./img/JS.jpg" alt="js">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
