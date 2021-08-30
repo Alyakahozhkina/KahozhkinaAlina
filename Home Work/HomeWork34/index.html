@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeWork33</title>
+</head>
+<style>
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+    }
+    img {
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        object-fit: cover;
+    }
+    .container {
+        max-width: 1335px;
+        margin: 0 auto;
+    }
+    .list-img {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .list-block {
+        margin: 0px 10px;
+    }
+    .all-versions {
+        position: relative;
+        height: 280px;
+        width: 425px;
+        margin-top: 7px;
+    }
+    .css-img {
+        -webkit-transition: all 0.6s;
+        -moz-transition: all 0.6s;
+        -o-transition: all 0.6s;
+        transition: all 0.6s;
+    }
+    .title {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+</style>
+<body>
+    <div class="page">
+        <div class="container">
+            <div class="list-img">
+                <div class="list-block">
+                    <div class="first-version all-versions">
+                        <img class="css-img" src="./img/CSS.jpg" alt="css">
+                        <h2 class="title"> Hidden text</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    'use strict'
+
+    let css = document.querySelector('.css-img');
+    let title = document.querySelector('.title');
+
+
+    css.addEventListener('mouseover', function () {
+        this.src = './img/JS.jpg';
+        this.alt = 'js';
+    });
+    css.addEventListener('mouseout', function () {
+        this.style.opacity = '0';
+        title.style.display = 'block';
+    });
+</script>
+</html>
