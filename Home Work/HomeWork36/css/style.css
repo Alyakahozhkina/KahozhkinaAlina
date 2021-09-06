@@ -96,14 +96,14 @@ img {
 	z-index: 9999;
     overflow: auto;
 }
+body.fixed {
+    overflow: hidden;
+}
 .modal__content {
-    position: fixed;
-	top: 50%;
-	left: 50%;
 	padding: 20px;
 	max-width: 360px;
     width: 100%;
-	transform: translate(-50%, -50%);	
+    margin: 12% auto 7%;
 	background: rgb(201,160,228);
     background: linear-gradient(90deg, rgba(201,160,228,1) 0%, rgba(255,163,163,1) 50%, rgba(254,215,160,1) 100%);
 	border: 1px solid rgb(0, 0, 0);
@@ -113,6 +113,7 @@ img {
 }
 .modal__header {
     border-bottom: 1px solid rgba(0, 0, 0, 0.486);
+    position: relative;
 }
 .modal__title {
     font-size: 20px;
@@ -120,8 +121,8 @@ img {
 }
 .modal__close {
     position: absolute;
-	top: 13px;
-	right: 15px;
+	top: -5px;
+	right: 0px;
     background: transparent;
     border: none;
     outline: none;
