@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script defer type="text/javascript" src="./js/main.js"></script>
+    <title>HomeWork35</title>
+</head>
+<body>
+    <div class="for__page">
+        <div class="page">
+            <div class="header">
+                <div class="container">
+                    <div class="header__inner">
+                        <div class="header__logo-box">
+                            <a class="logo" href="#">
+                                <img src="./img/logo.png" alt="logo">
+                            </a>
+                        </div>
+                        <a class="header__phone" href="tel:+380991234567">+38(099)-12-34-567</a>
+                        <a class="header__btn-order" href="#">Обратный звонок</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-window">
+            <div class="modal fade">
+                <div class="modal__content">
+                    <div class="modal__header">
+                        <h3 class="modal__title">Заказать обратный звонок</h3>
+                        <button class="modal__close" type="button">X</button>
+                    </div>
+                    <div class="modal__text">
+                        <form class="modal__form" action="#">
+                            <input class="name" type="text" name="name" id="name" placeholder="Ваше имя" required>
+                            <input class="phone" type="tel" name="phone" id="phone" placeholder="Ваш телефон" required>
+                            <label class="details-label" for="details">Уточнить детали...</i></label>
+                            <textarea class="details" name="details" id="details" cols="10" rows="5" placeholder="Ваше сообщение"></textarea>
+                            <button class="btn-send" type="submit">Заказать</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
