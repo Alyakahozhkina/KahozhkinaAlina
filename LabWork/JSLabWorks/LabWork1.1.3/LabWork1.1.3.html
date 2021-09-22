@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LabWork 1.1.3</title>
+</head>
+<body>
+    
+    <script>
+
+        let grade = prompt('Введите Ваше количество баллов');
+
+            if(grade <= 100 && grade >= 95) {
+                alert('Ваша оценка - A');
+            } else if (grade <= 94 && grade >= 85) {
+                alert('Ваша оценка - B');
+            } else if (grade <= 84 && grade >= 75) {
+                alert('Ваша оценка - C');
+            } else if (grade <= 74 && grade >= 65) {
+                alert('Ваша оценка - D');
+            } else if (grade <= 64 && grade >= 60) {
+                alert('Ваша оценка - E');
+            } else if(grade <= 59 && grade >= 0 && grade != null && grade != '') {
+                alert('Ваша оценка - FX');
+            } else if (grade == '' || grade == null) {
+                alert('Вы не ввели свой балл');
+            } else {
+                alert('Такого балла не существует');
+            }
+
+    </script>
+</body>
+</html>
