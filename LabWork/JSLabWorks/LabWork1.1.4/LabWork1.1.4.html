@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LabWork 1.1.4</title>
+</head>
+<body>
+    <style>
+        .container {
+            max-width: 1170px;
+            margin: 0 auto;
+        }
+        .grades__title, 
+        .calculator__title,
+        form {
+            text-align: center;
+        }
+        .calculator__title {
+            margin-top: 50px;
+        }
+        .box-input {
+            display: flex;
+            text-align: center;
+            margin: 0 auto;
+            max-width: 300px;
+            width: 100%;
+            padding-bottom: 10px;
+        }
+        label {
+            max-width: 100px;
+            width: 100%;
+        }
+        .grades__button {
+            max-width: 150px;
+            width: 100%;
+            text-align: center;
+            background: rgb(255, 220, 252);
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 8px;
+            margin: 0 auto;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background 0.5s;
+        }
+        .grades__button:hover {
+            background: rgb(255, 158, 247);
+        }
+    </style>
+    <div class="page">
+        <div class="container">
+            <div class="grades">
+                <h2 class="grades__title">Введите Ваши оценки по предметам:</h2>
+                <form action="#" class="form">
+                    <div class="box-input">
+                        <label>Математика</label>
+                        <input class='grades__input'type="number" data-subject='Математика'>
+                    </div>
+                    <div class="box-input">
+                        <label>Химия</label>
+                        <input class='grades__input'type="number" data-subject='Химия'>
+                    </div>
+                    <div class="box-input">
+                        <label>Физика</label>
+                        <input class='grades__input'type="number" data-subject='Физика'>
+                    </div>
+                    <div class="box-input">
+                        <label>Биология</label>
+                        <input class='grades__input'type="number" data-subject='Биология'>
+                    </div>
+                    <div class="box-input">
+                        <label>География</label>
+                        <input class='grades__input'type="number" data-subject='География'>
+                    </div>
+                    <button class="grades__button">Проверить</button>
+                </form>
+            </div>
+            <!-- <div class="calculator">
+                <h2 class="calculator__title">Калькулятор:</h2>
+                <div class="calculator__box-input">
+                    <label>Введите первое число</label>
+                    <input class='calculator__input'type="number">
+                </div>
+                <div class="calculator__box-input">
+                    <label>Введите второе число</label>
+                    <input class='calculator__input'type="number">
+                </div>
+
+
+            </div> -->
+        </div>
+    </div>
+    <script>
+
+
+        let inputs = document.querySelectorAll('.grades__input');
+        let button = document.querySelector('.grades__button');
+        
+
+        button.addEventListener('click', function () {
+            let pass = [];
+            let passNot = [];
+            inputs.forEach(function(input) {
+                
+                if(input.value <= 100 && input.value >= 0 && input.value != '') {
+                    if(input.value >= 60) {
+                        pass.push(input.dataset.subject);
+                    } else if (input.value < 60) {
+                        passNot.push(input.dataset.subject);
+                    }
+                } else if (input.value == '') {
+                    alert(`Вы не ввели оценку по предмету - ${input.dataset.subject}`);
+                } else {
+                    alert(`Такой оценки не существует - ${input.dataset.subject}: ${input.value}`);
+                }
+            })  
+
+            if(pass.length === 5) {
+                alert('Вы успешно сдали все предметы!');
+            } else if (passNot.length === 5) {
+                alert('Вы провалили все предметы!');
+            } else if (passNot.length !== 0 && pass.length !== 0){
+                alert(`Вы сдали такие предметы: ${pass}, но вы не сдали такие предметы: ${passNot}`)
+            }
+        })
+        
+
+
+
+    
+
+    </script>
+</body>
+</html>
