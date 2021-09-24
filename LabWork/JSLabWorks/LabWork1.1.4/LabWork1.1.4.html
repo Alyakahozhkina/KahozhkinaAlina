@@ -14,7 +14,7 @@
         }
         .grades__title, 
         .calculator__title,
-        form {
+        .grades__form {
             text-align: center;
         }
         .calculator__title {
@@ -32,7 +32,8 @@
             max-width: 100px;
             width: 100%;
         }
-        .grades__button {
+        .grades__button,
+        .calculator__button {
             max-width: 150px;
             width: 100%;
             text-align: center;
@@ -47,15 +48,43 @@
             margin-top: 10px;
             transition: background 0.5s;
         }
-        .grades__button:hover {
+        .grades__button:hover,
+        .calculator__button:hover {
             background: rgb(255, 158, 247);
+        }
+
+        .calculator {
+            text-align: center;
+        }
+        .calculator__button {
+            max-width: 40px;
+            margin-top: 20px;
+            margin-right: 15px;
+        }
+        .calculator__button:last-child {
+            margin-right: 0px;
+        }
+        .calculator__box-input {
+            margin-top: 10px;
+        }
+        .calculator__form {
+            margin-bottom: 20px;
+        }
+        .calculator__result {
+            border: 2px solid black;
+            border-radius: 5px;
+            height: 25px;
+            margin: 0 auto;
+            margin-top: 10px;
+            max-width: 150px;
+            padding-top: 5px;
         }
     </style>
     <div class="page">
         <div class="container">
             <div class="grades">
                 <h2 class="grades__title">Введите Ваши оценки по предметам:</h2>
-                <form action="#" class="form">
+                <form action="#" class="grades__form">
                     <div class="box-input">
                         <label>Математика</label>
                         <input class='grades__input'type="number" data-subject='Математика'>
@@ -79,26 +108,30 @@
                     <button class="grades__button">Проверить</button>
                 </form>
             </div>
-            <!-- <div class="calculator">
+            <div class="calculator">
                 <h2 class="calculator__title">Калькулятор:</h2>
-                <div class="calculator__box-input">
-                    <label>Введите первое число</label>
-                    <input class='calculator__input'type="number">
-                </div>
-                <div class="calculator__box-input">
-                    <label>Введите второе число</label>
-                    <input class='calculator__input'type="number">
-                </div>
-
-
-            </div> -->
+                <form action="#" class="calculator__form">
+                    <div class="calculator__box-input">
+                        <label>Введите первое число</label>
+                        <input class='calculator__input'type="number">
+                    </div>
+                    <div class="calculator__box-input">
+                        <label>Введите второе число</label>
+                        <input class='calculator__input'type="number">
+                    </div>
+                    <button class="calculator__button" value="+">+</button>
+                    <button class="calculator__button" value="-">-</button>
+                    <button class="calculator__button" value="/">/</button>
+                    <button class="calculator__button" value="*">*</button>
+                </form>
+                <div>Результат: </div>
+                <div class="calculator__result"></div>
+            </div>
         </div>
     </div>
     <script>
-
-
-        let inputs = document.querySelectorAll('.grades__input');
-        let button = document.querySelector('.grades__button');
+        const inputs = document.querySelectorAll('.grades__input');
+        const button = document.querySelector('.grades__button');
         
 
         button.addEventListener('click', function () {
@@ -130,9 +163,36 @@
         
 
 
+        //Calculator
+        const calcInputs = document.querySelectorAll('.calculator__input');
+        const calcButton = document.querySelectorAll('.calculator__button');
+        const result = document.querySelector('.calculator__result');
 
-    
 
+        calcButton.forEach((button) => {
+            let mark = button.value;
+            button.addEventListener('click', () => {
+                result.innerHTML = checkMark(mark);
+            })
+        })
+
+        function checkMark (mark) {
+            switch (mark) {
+                    case '+':
+                        return +calcInputs[0].value + +calcInputs[1].value;
+                        break;
+
+                    case '-':
+                        return +calcInputs[0].value - +calcInputs[1].value;
+                        break;
+
+                    case '/':
+                        return +calcInputs[0].value / +calcInputs[1].value;
+                        break;
+                    case '*':
+                        return +calcInputs[0].value * +calcInputs[1].value;
+                }
+        }
     </script>
 </body>
 </html>
