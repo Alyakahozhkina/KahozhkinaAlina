@@ -1,5 +1,24 @@
-@import url(./normalize.less);
-@import url(./variables.less);
+@import "normalize.less";
+
+//VARS
+@darkColor: rgb(20, 10, 10);
+@lightBlueColor: #077f8f;
+@lightColor: #ebf6fa;
+@fontSize: 17px;
+@fontFamily: Arial, Helvetica, sans-serif;
+//VARS
+
+// MIXINS
+.hovered (@_color: #fff) {
+    color: @_color
+}
+.transition {
+    transition: color 0.4s ease;
+}
+.gradient (@_color1: @lightBlueColor, @_color2: @lightColor) {
+    background: linear-gradient(3deg, @_color1 0%, @_color2 90%);
+}
+// MIXINS
 
 .for__page {
     min-height: 100%;
@@ -9,11 +28,84 @@ body,
 html {
     height: 100%;
 }
+body {
+    font-family: @fontFamily;
+    font-size: @fontSize;
+}
+.page {
+    padding-bottom: 80px;
+}
+.footer {
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
 .container {
-    max-width: 1170px;
+    max-width: 1140px;
+    width: 100%;
     padding: 0px 15px;
     margin: 0 auto;
 }
 .row {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header {
+    padding: 20px;
+    .gradient (@lightBlueColor, @lightColor);
+
+    &__logo {
+        background: @lightColor;
+        border-radius: 50%;
+
+        a{
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            color: @darkColor;
+            .transition;
+
+            &:hover {
+                .hovered (@lightBlueColor);
+            }
+        }
+    }
+}
+
+.menu {
+
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        list-style-type: none;
+    }
+
+    &__link {
+        color: @darkColor;
+        text-decoration: none;
+        padding: 20px;
+        .transition;
+    
+        &--active,
+        &:hover {
+            .hovered (@lightColor);
+        }
+    }
+}
+
+.footer {
+    .gradient (@lightColor, @lightBlueColor);
+
+    &__text {
+        margin: 30px auto 0px;
+        text-align: center;
+        color: @darkColor;
+    }
 }
